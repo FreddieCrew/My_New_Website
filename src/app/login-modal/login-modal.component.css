@@ -1,0 +1,32 @@
+.field-containers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.example-full-width{
+    width: 90%;
+    justify-self: center;
+}
+.example-button-row{
+    margin-bottom: 8px;
+}
+
+.logo-show{
+    font-size: 12vh;
+    margin: 1vh;
+    color:  #e9c46a;
+    transition: all 1.2s;
+}
+.logo-show:hover{
+    color: black;
+    transform: scale(1.1);
+}
+
+
+.recaptcha-scale{
+    transform:scale(0.9);
+    -webkit-transform:scale(0.9);
+    transform-origin:0 0;
+    -webkit-transform-origin:0 0;
+}

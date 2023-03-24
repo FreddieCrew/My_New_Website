@@ -1,0 +1,35 @@
+<form class="form-container" (ngSubmit)="onSubmit()">
+  <div class = "field-containers">
+  <mat-form-field class="example-full-width">
+    <mat-label>Username</mat-label>
+    <input matInput placeholder="" [formControl]="myControl">
+    <!-- <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete> -->
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+    <!-- <mat-autocomplete  autoActiveFirstOption #auto="matAutocomplete" >
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete> -->
+  </mat-form-field>
+  <div class="example-button-row" >
+    <button type = "submit" mat-raised-button style="background-color: #347478; color: white;">Login</button>
+  </div>
+  <div class="example-button-row">
+    <button mat-raised-button color = "accent" style="background-color: #347478; color: white;">Register</button>
+  </div>
+  <div class = "recaptcha-scale">
+    <re-captcha (captchaResponse)="handleCorrectCaptcha($event)" (loaded)="sendCaptchaExecuteHere()" site_key="6LdF_yQaAAAAAIzytD7m6wjs5i6ckihJvpIyV1Ld"></re-captcha>
+  </div> 
+  </div>
+</form>
